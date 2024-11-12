@@ -1,0 +1,97 @@
+body {
+    font-family: "Roboto", serif;
+    margin: 0;
+}
+
+h1 {
+    color: white;
+    margin: 20px;
+}
+
+header {
+    display: flex;
+    background-color: rgb(90, 90, 233);
+    justify-content: space-between;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    /* Ajustado para deixar espaço para o botão de hambúrguer */
+    align-items: center;
+    padding: 0.5rem;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 40px;
+    font-size: 2em;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para o botão de hambúrguer */
+.hamburger {
+    display: none;
+    /* Escondido por padrão no desktop */
+    font-size: 2em;
+    cursor: pointer;
+    color: white;
+}
+
+ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: rgb(90, 90, 233);
+    padding: 1rem 0;
+}
+
+ul.active {
+    display: flex;
+    /* Mostra o menu quando ativo */
+}
+
+#hamburger::after {
+    content: "☰";
+}
+
+#hamburger.active::after {
+    content: "X";
+}
+
+
+ul li {
+    text-align: center;
+    margin: 0.5rem 0;
+}
+
+.hamburger {
+    display: block;
+}
+
+h2 {
+    text-align: center;
+}
+
+main figure figcaption {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    background-color: rgb(90, 90, 233);
+}
