@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This is Brazil</title>
+    <link rel="stylesheet" href="styles/place.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <header class="title">
+            <h1>Brazil</h1>
+        </header>
+
+        <div class="hero">
+            <picture>
+                <source srcset="images/2fymi85z5vo5pcl5rsnsr3xgi.webp" media="(min-width: 1000px)">
+                <source srcset="images/ha-43-anos-lula-era-preso-pela-ditadura-militar.jpg" media="(min-width: 800px)">
+                <img src="images/pexels-213167965-17648458.webp" alt="Temple name and location" width="1000"
+                    height="500">
+            </picture>
+        </div>
+
+        <section class="data-section">
+            <h2>Data</h2>
+            <ul>
+                <li><strong>Area:</strong> 8.515.767 km²</li>
+                <li><strong>Population:</strong>203.062.512</li>
+                <li><strong>Capital:</strong>Brasília</li>
+                <li><strong>Languages:</strong>Portuguese</li>
+                <li><strong>Currency:</strong>Brazilian Real</li>
+            </ul>
+        </section>
+
+        <section class="weather-section">
+            <h2>Weather <span class="weather-icon">⛅</span></h2>
+            <ul>
+                <li><strong>Temperature:</strong> 10°C</li>
+                <li><strong>Conditions:</strong> Partly Cloudy</li>
+                <li><strong>Wind:</strong> 5 km/h</li>
+                <li><strong>Wind Chill:</strong> <span id="wind-chill">Calculating...</span></li>
+            </ul>
+        </section>
+
+        </main>
+        <footer class="footer">
+            <p>©<span id="current-year"></span>Brazil</p>
+            <p>Last modified: <span id="last-modified"></span></p>
+        </footer>
+
+    </div>
+
+    <script src="place.js" defer></script>
+</body>
+
+</html>
