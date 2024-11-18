@@ -7,7 +7,7 @@
     <meta name="author" content="Eryck">
     <meta name="description" content="Temples Page">
     <link rel="stylesheet" href="styles/filtered-temples.css">
-    <link rel="stylesheet" href="styles/temples-large.css">
+    <link rel="stylesheet" href="styles/filtered-large.css">
     <script src="scripts/getdates.js" defer></script>
     <script src="scripts/filtered-temples.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,9 +22,8 @@
     <header>
         <h1>Temple Album</h1>
         <button class="menu-icon" onclick="toggleMenu()">☰</button>
-        <nav id="myLinks">
-            <div class="hamburger" id="hamburger"></div>
-            <ul class="nav-links">
+        <nav class="nav-menu">
+            <ul>
                 <li><a href="#" onclick="showAll()">Home</a></li>
                 <li><a href="#" onclick="filterOld()">Old</a></li>
                 <li><a href="#" onclick="filterNew()">New</a></li>
@@ -33,12 +32,13 @@
             </ul>
         </nav>
     </header>
+
     <main>
-        <div id="temple-cards-container"></div>
+        <div id="temple-container"></div>
     </main>
     <footer>
         <p>&copy; <span id="currentyear"></span> Eryck Lima - Brazil</p>
-        <p>Last Modification: <span id="last-modified"></span></p>
+        <p>Last Modification: <span id="lastModified"></span></p>
     </footer>
 </body>
 

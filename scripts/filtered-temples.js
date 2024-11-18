@@ -4,7 +4,6 @@ function toggleMenu() {
 
 function renderTemples(templesToDisplay) {
     const templeContainer = document.getElementById("temple-container");
-    templeContainer.innerHTML = "";
 
     templesToDisplay.forEach(temple => {
         const templeCard = document.createElement("div");
@@ -20,13 +19,13 @@ function renderTemples(templesToDisplay) {
         name.textContent = temple.templeName;
 
         const location = document.createElement("p");
-        location.textContent = Location: ${ temple.location };
+        location.textContent = `Location: ${temple.location}`;
 
         const dedicated = document.createElement("p");
-        dedicated.textContent = Dedicated: ${ temple.dedicated };
+        dedicated.textContent = `Dedicated: ${temple.dedicated}`;
 
         const area = document.createElement("p");
-        area.textContent = Area: ${ temple.area.toLocaleString() } sq ft;
+        area.textContent = `Area: ${temple.area.toLocaleString()} sq ft`;
 
         templeCard.appendChild(img);
         templeCard.appendChild(name);
@@ -38,7 +37,6 @@ function renderTemples(templesToDisplay) {
     });
 }
 
-document.addEventListener("DOMContentLoaded", () => renderTemples(temples));
 
 const temples = [
     {
@@ -97,4 +95,6 @@ const temples = [
         area: 11500,
         imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/aba-nigeria/400x250/aba-nigeria-temple-lds-273999-wallpaper.jpg"
     },
+
 ];
+document.addEventListener("DOMContentLoaded", renderTemples(temples));
