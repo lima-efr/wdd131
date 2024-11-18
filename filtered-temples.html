@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Eryck">
+    <meta name="description" content="Temples Page">
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css">
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/filtered-temples.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap"
+        rel="stylesheet">
+    <title>Temple Album</title>
+</head>
+
+<body>
+    <header>
+        <h1>Temple Album</h1>
+        <button class="menu-icon" onclick="toggleMenu()">☰</button>
+        <nav id="myLinks">
+            <div class="hamburger" id="hamburger"></div>
+            <ul class="nav-links">
+                <li><a href="#" onclick="showAll()">Home</a></li>
+                <li><a href="#" onclick="filterOld()">Old</a></li>
+                <li><a href="#" onclick="filterNew()">New</a></li>
+                <li><a href="#" onclick="filterLarge()">Large</a></li>
+                <li><a href="#" onclick="filterSmall()">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="temple-cards-container"></div>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Eryck Lima - Brazil</p>
+        <p>Last Modification: <span id="last-modified"></span></p>
+    </footer>
+</body>
+
+</html>
