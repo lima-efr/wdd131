@@ -1,0 +1,153 @@
+/* Styles for header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #d6179d;
+    color: white;
+}
+
+h1 {
+    margin: 0;
+}
+
+/* Menu icon (hamburger) for small screens */
+.menu-icon {
+    font-size: 24px;
+    display: none;
+    /* Hidden by default */
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Navigation menu styles */
+.nav-menu ul {
+    display: flex;
+    /* Align navigation links in a row by default */
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-menu ul {
+        display: none;
+        flex-direction: column;
+        background-color: #4A148C;
+        padding: 10px;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+
+    }
+
+    .nav-menu ul li a:hover {
+        text-decoration: underline;
+    }
+
+
+    .nav-menu.open ul {
+        display: flex;
+    }
+}
+
+main {
+    padding: 20px;
+}
+
+main h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#temple-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.temple-card {
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    background-color: #f9f9f9;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+}
+
+.temple-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.temple-card.loaded {
+    opacity: 1;
+}
+
+footer {
+    background-color: #7e2a77;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 5px;
+}
+
+section {
+    display: grid;
+    gap: 20px;
+}
+
+figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    max-width: 300px;
+}
+
+@media (min-width: 1024px) {
+    section {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    section {
+        grid-template-columns: 1fr;
+    }
+}
